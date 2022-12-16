@@ -118,3 +118,21 @@ function comprarCarrito() {
     })
 
 }
+
+
+const urlUsuarios = "https://jsonplaceholder.typicode.com/users";
+const listaUsuarios =document.querySelector("#lista-usuarios")
+//agregar los nombres de los ultimos compradores
+/*fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(json => console.log(json))*/
+
+  fetch(urlUsuarios)
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(usuario => {
+                const li =document.createElement("li");
+                li.textContent = usuario.name;
+                listaUsuarios.append(li);
+            })
+        })
