@@ -63,7 +63,7 @@ aside{
     color: rgb(51, 162, 214);
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
-    position: relative;
+    position: relative; 
 }
 .boton-menu.active::before{
     content: "";
